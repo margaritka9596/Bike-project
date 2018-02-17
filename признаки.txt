@@ -1,0 +1,26 @@
+train['str_hum'] = (train['humidity'] / 10886)**2
+test['str_hum'] = (test['humidity'] / 6493)**2
+
+train['hum_div_seas'] = (train['humidity']/(train['day']))*2
+test['hum_div_seas'] = (test['humidity']/(test['day']))*2
+
+train['hum_div_seas'] = (train['temp']/(train['humidity']))*2
+test['hum_div_seas'] = (test['temp']/(test['humidity']))*2
+
+train['temp2'] = (train['temp'])**2
+test['temp2'] = (test['temp'])**2
+
+train['dif'] = (train['temp'] - train['hour'])**2
+test['dif'] = (test['temp'] - test['hour'])**2
+
+train['hum2'] = (train['humidity'])*2
+test['hum2'] = (test['humidity'])*2
+
+train['dif'] = (train['atemp'] - train['temp'])**2
+test['dif'] = (test['atemp'] - test['temp'])**2
+
+train['dif2'] = (train['humidity'] - train['windspeed'])**2
+test['dif2'] = (test['humidity'] - test['windspeed'])**2
+
+train['wd2'] = (train['workingday'])*2
+test['wd2'] = (test['workingday'])*2
